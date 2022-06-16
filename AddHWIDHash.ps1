@@ -4,12 +4,12 @@ Info:
 How to use this script:
   1. Open an Administrator PowerShell window
   2. Type the following comands:
-     - Set-ExecutionPolicyBypass
      - Invoke-WebRequest -Uri bit.ly/addhwidhash -OutFile .\script.ps1; .\script.ps1
   3. Enter credentials
 #>
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Force  | Out-Null
 $env:Path = "C:\Program Files\WindowsPowerShell\Scripts"
-Install-PackageProvider -Name NuGet -Force
+Install-PackageProvider -Name NuGet -Force | Out-Null
 Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
-Install-Script Get-WindowsAutoPilotInfo -Force
+Install-Script Get-WindowsAutoPilotInfo -Force | Out-Null
 Get-WindowsAutoPilotInfo.ps1 -Online
