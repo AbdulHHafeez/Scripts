@@ -7,7 +7,6 @@ How to use this script:
      - iex (irm bit.ly/addhwidhash)
   3. Enter credentials
 #>
-$credentials = Connect-MSGraph
 Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Force  | Out-Null
 $env:Path = "C:\Program Files\WindowsPowerShell\Scripts"
 Install-PackageProvider -Name NuGet -Force | Out-Null
