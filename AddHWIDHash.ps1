@@ -4,7 +4,7 @@ Info:
 How to use this script:
   1. Open an Administrator PowerShell window
   2. Type the following comands:
-     - Invoke-WebRequest -Uri bit.ly/addhwidhash -OutFile .\script.ps1; .\script.ps1
+     - iex (irm bit.ly/addhwidhash)
   3. Enter credentials
 #>
 Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Force  | Out-Null
